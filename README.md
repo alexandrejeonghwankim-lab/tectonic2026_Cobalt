@@ -8,6 +8,9 @@ The project responds to the KBC challenge: how can a bank understand what custom
 
 NOVA helps KBC coordinate customer guidance through one shared decision engine. It checks context, consent, timing and customer protection rules before selecting what a customer should receive. Sometimes that means showing a useful next step. Sometimes the most respectful decision is silence.
 
+<img width="3150" height="1747" alt="image" src="https://github.com/user-attachments/assets/b525da87-7a39-41d9-a41b-7291e0315f18" />
+
+
 ## Product Vision
 
 Modern banks have many reasons to contact customers: life events, claims, savings goals, product offers, financial guidance and service reminders. Without coordination, those messages can become noisy or badly timed.
@@ -20,6 +23,9 @@ KBC NOVA turns personalization into a governed customer relationship system:
 - protection rules that block unsuitable offers
 - synthetic large-scale backtesting before activation
 - optional AI support for drafting audience rules
+
+  <img width="3150" height="1747" alt="image" src="https://github.com/user-attachments/assets/37876d09-e1eb-485f-8de4-985110ad9533" />
+
 
 The result is a banking experience that feels proactive, personal and respectful at scale.
 
@@ -37,6 +43,8 @@ Core flow:
 6. Arbitration selects the single most appropriate message per customer.
 7. The customer preview shows the selected message, silence or suppressed alternatives.
 8. The audit view explains the decision using the actual synthetic row values.
+   <img width="3150" height="1747" alt="image" src="https://github.com/user-attachments/assets/8a8acb48-1046-472c-ab6e-f2c2546c8daa" />
+
 
 Example: if Marc has a home-insurance claim waiting for documents, NOVA prioritizes claim help instead of showing him a travel insurance offer. If Emma turns 18, NOVA gives her first-step banking guidance instead of a random promotion.
 
