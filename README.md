@@ -2,90 +2,52 @@
 
 **Next-step Orchestration for Value and Assistance**
 
-KBC NOVA is a local proof of concept for the Tectonic Hackathon KBC challenge. The challenge asks how KBC could better understand, support and guide more than 2.3 million customers at the right moment, in a scalable way.
+KBC NOVA is a proof of concept for a scalable, privacy-aware personalization layer for retail banking.
 
-This project explores a privacy-aware personalization engine: KBC teams can define a customer support intent, test it against synthetic customer signals, pass it through governance checks, and see which single message, if any, a customer should receive.
+The project responds to the KBC challenge: how can a bank understand what customers need, respond at the right moment, and do this meaningfully for millions of people?
 
-The central idea is simple: a bank should not only decide what to say. It should also know when to stay quiet.
+NOVA helps KBC coordinate customer guidance through one shared decision engine. It checks context, consent, timing and customer protection rules before selecting what a customer should receive. Sometimes that means showing a useful next step. Sometimes the most respectful decision is silence.
 
-## Why This Fits The KBC Brief
+## Product Vision
 
-The KBC brief is not asking for another isolated feature. It asks for a proof of concept for a scalable personalization approach that strengthens the relationship between KBC and its customers.
+Modern banks have many reasons to contact customers: life events, claims, savings goals, product offers, financial guidance and service reminders. Without coordination, those messages can become noisy or badly timed.
 
-KBC NOVA answers that with one shared engine for:
+KBC NOVA turns personalization into a governed customer relationship system:
 
-- understanding customer situations from approved signals
-- respecting consent and protection rules
-- preventing irrelevant or badly timed offers
-- selecting one useful next step per customer
-- explaining why a customer sees a message
-- scaling decisions over a large synthetic population without calling AI for every customer
+- one engine for service messages, guidance and offers
+- one customer-level decision about what is most useful now
+- clear reasons for why a message appears
+- protection rules that block unsuitable offers
+- synthetic large-scale backtesting before activation
+- optional AI support for drafting audience rules
 
-The demo focuses on customer trust. For example, if a customer has a stuck insurance claim, the system prioritizes help with the claim instead of showing a travel insurance offer.
+The result is a banking experience that feels proactive, personal and respectful at scale.
 
-## Project Context
+## What The Prototype Demonstrates
 
-This was built for the Tectonic Hackathon on 30 September 2026.
+The application shows how KBC could manage personalized journeys without calling AI for every customer.
 
-The official submission requires:
+Core flow:
 
-- a short project description
-- a public GitHub repository
-- a demo video under 3 minutes
-- screenshots from the Aikido security audit
-- a short README explaining how to run the project and what is unfinished
+1. A customer intent or campaign is defined.
+2. The audience is expressed as rules over approved synthetic customer signals.
+3. Governance checks validate the rule.
+4. A backtest runs across 100,000 synthetic customer rows.
+5. Consent, protection rules and cooldowns are applied.
+6. Arbitration selects the single most appropriate message per customer.
+7. The customer preview shows the selected message, silence or suppressed alternatives.
+8. The audit view explains the decision using the actual synthetic row values.
 
-The judging criteria are:
+Example: if Marc has a home-insurance claim waiting for documents, NOVA prioritizes claim help instead of showing him a travel insurance offer. If Emma turns 18, NOVA gives her first-step banking guidance instead of a random promotion.
 
-- creativity
-- technical ability
-- fit with the challenge
-- security
-
-All data in this repository is synthetic. Do not enter real customer data.
-
-## What The Prototype Shows
-
-The app demonstrates a governed personalization flow:
-
-1. Library guidance campaigns are already active.
-2. A KBC employee can create or load an example customer intent.
-3. The intent is converted into audience conditions over approved synthetic signals.
-4. A backtest runs across 100,000 generated customer rows.
-5. Governance and consent rules remove unsuitable customers.
-6. Arbitration chooses the most useful message per customer.
-7. The customer preview shows the winning message, silence, or suppressed alternatives.
-8. Every visible outcome can be inspected through actual CSV row values and campaign rules.
-
-Optional AI can draft an audience rule from a plain-language request, but the core decision engine is deterministic and works without AI.
-
-## Demo Story
-
-Use this short story for a judging demo:
-
-> Banks usually talk to customers when it suits the bank. KBC NOVA helps the bank speak when it helps the customer, and stay quiet when it does not.
-
-Suggested flow:
-
-1. Open Marc in **Test customers**.
-2. Show that his home-insurance claim needs documents and that other offers are suppressed.
-3. Open Emma and show a life-event guidance message for turning 18.
-4. Go to **Campaigns** and load the travel insurance or car/mobility example.
-5. Run the backtest over all synthetic customers.
-6. Inspect a winning CSV row and its audit trail.
-7. Activate the campaign locally.
-8. Return to customer previews and show that governance and arbitration still choose only the most appropriate message.
-
-The most important point is not that the app can create campaigns. The important point is that all messages, library guidance and employee-created offers pass through one customer-protection engine.
-
-## Run Locally
+## Running The Project
 
 Requirements:
 
 - Python 3.12
 - Node.js
 
-On Linux or macOS:
+Start the local app:
 
 ```bash
 ./start.sh
@@ -97,61 +59,124 @@ On Windows:
 start.bat
 ```
 
-Then open the local address shown in the terminal, normally:
+Open the local address shown in the terminal, normally:
 
 ```text
 http://localhost:3000
 ```
 
-Keep the terminal running while using the app. Press `Ctrl+C` to stop it.
+Keep the terminal running while using the application. Press `Ctrl+C` to stop it.
 
-There is no login and no password. This is a local demo server only. Do not expose it to the public internet.
+This is a local prototype. There is no login and no password. Do not expose the server publicly and do not enter real customer data.
+
+## How To Try It
+
+### 1. Inspect Customer Decisions
+
+Open **Test customers** and select Emma, Marc, a random row or any CSV row.
+
+The screen shows:
+
+- the message the customer receives, if any
+- the actual synthetic signal values
+- every campaign considered
+- why campaigns matched, failed, were blocked or were suppressed
+- the final explanation shown to the customer
+
+### 2. Backtest A Customer Intent
+
+Open **Campaigns** and load an offline example such as travel insurance or car/mobility.
+
+Run the backtest to evaluate the rule against all synthetic customers. The app reports reach, selected customers and suppression reasons.
+
+### 3. Activate Locally
+
+After a backtest, activate the campaign locally. It is saved to the local campaign registry and participates in future simulated decisions.
+
+No real notification, email, message or customer contact is sent.
+
+### 4. Try AI-Assisted Audience Drafting
+
+Optionally, enter an audience request in the AI audience field. The AI is used only to draft filters over approved signal names.
+
+The AI does not receive customer rows, real personal data or the customer-facing message. Its output must pass deterministic validation before it can be backtested or activated.
 
 ## Main Screens
 
-### Campaigns
+**Campaigns**
 
-Create or load an example customer intent, define the message, optionally upload an image, run a backtest and activate the campaign locally.
+Create or load a customer intent, define the message, optionally add an image, run a backtest and activate the campaign locally.
 
-The AI audience box is separate from the customer-facing message. If AI is used, it receives only the audience request and the approved signal schema, not customer rows or real personal data.
+**Test customers**
 
-### Test Customers
+Inspect customer-level outcomes and verify every decision against synthetic CSV values.
 
-Inspect Emma, Marc, a random row or any CSV row. The app recomputes the decision for that row and shows:
+**Registry**
 
-- actual signal values
-- matched campaigns
-- blocked campaigns
-- suppressed alternatives
-- the final customer-facing message or silence
-- the explanation shown to the customer
+View active local campaigns and pause or resume them.
 
-### Registry
+**Governance**
 
-See active campaigns and pause or resume them for local simulation.
+Review the matching, protection, selection and explanation logic.
 
-### Governance
+**Settings**
 
-Review the allowed targeting signals, protection-only signals and the logic used to match, protect, choose one message and explain the outcome.
-
-### Settings
-
-Configure an OpenAI-compatible endpoint if you want to test AI-assisted audience drafting. The app also works with offline examples.
+Configure an OpenAI-compatible endpoint for optional AI-assisted audience drafting.
 
 ## Data
 
-The generated dataset contains 100,000 synthetic customer signal rows.
+All data is synthetic.
+
+The base dataset contains 100,000 generated customer signal rows. Emma and Marc are showcase rows, but they use the same decision logic as every other row.
 
 Important files:
 
-- `data/customer_signals.csv`: main synthetic signal store used for backtests and previews
+- `data/customer_signals.csv`: main synthetic signal store
 - `campaigns/library/`: always-on guidance definitions
-- `campaigns/registry/`: locally activated employee-created campaigns
-- `campaign_engine.py`: deterministic matching, governance and arbitration logic
-- `workbench.py`: app workflow logic
+- `campaigns/registry/`: locally activated campaigns
+- `campaign_engine.py`: matching, governance and arbitration logic
+- `workbench.py`: application workflow logic
 - `generate_data.py`: reproducible synthetic data generation
 
-Emma and Marc are showcase rows, but they are still processed by the same logic as every other row.
+The app can also import another UTF-8 CSV with the required headers documented in the interface.
+
+## Technical Approach
+
+NOVA separates authoring from runtime decision-making.
+
+At authoring time, a KBC employee can describe a customer intent and optionally use AI to draft audience filters. At runtime, deterministic Python logic evaluates approved rules against precomputed signals.
+
+This keeps the core customer decision:
+
+- auditable
+- reproducible
+- explainable
+- independent from per-customer AI calls
+- constrained to approved data fields
+
+The decision engine combines:
+
+- signal matching
+- consent tier checks
+- protection rules
+- campaign cooldowns
+- contact budget logic
+- priority-based arbitration
+
+## Security And Privacy Notes
+
+The prototype is designed around privacy and restraint:
+
+- no real customer data is used
+- no API keys should be committed
+- customer identifiers are synthetic
+- AI output is treated as untrusted
+- user-created rules are stored as data, not executed as code
+- sensitive targeting categories are blocked
+- financial pressure can be used for protection, not for targeting offers
+- the app does not make credit, pricing, eligibility or underwriting decisions
+
+This is a proof of concept, not a production banking system or a legal compliance approval.
 
 ## Checks
 
@@ -173,32 +198,17 @@ Regenerate synthetic base records:
 .venv/bin/python generate_data.py
 ```
 
-Regenerating data overwrites the base synthetic CSVs, not approved campaigns or uploaded images.
-
-## Security And Privacy Approach
-
-This prototype is designed to avoid common hackathon pitfalls:
-
-- no real customer data
-- no committed API keys
-- synthetic opaque customer identifiers
-- deterministic validation of AI output
-- campaign rules are data, not executable code
-- no credit, pricing, eligibility or insurance underwriting decisions
-- forbidden sensitive targeting categories are blocked
-- the AI drafting step does not receive customer rows
-
-This is still a proof of concept, not a production banking system or legal compliance approval.
+Regenerating data overwrites the base synthetic CSV files. It does not approve campaigns or send any customer communication.
 
 ## Limitations
 
-- No real KBC integration
-- No production authentication
-- No real delivery of messages, emails, calls or notifications
-- No real consent synchronization
-- No production-grade compliance review
-- No validated transaction-derived feature pipeline
-- No credit, insurance pricing or investment advice decisions
+- no real KBC integration
+- no production authentication
+- no real message delivery
+- no production consent synchronization
+- no production compliance workflow
+- no validated transaction-derived feature pipeline
+- no credit, insurance pricing or investment advice decisions
 
-The prototype is meant to demonstrate the operating model: scalable, explainable and restrained personalization that protects the customer relationship.
+KBC NOVA demonstrates the operating model: scalable personalization that protects the customer relationship by choosing the most helpful next step, or choosing not to interrupt.
 
