@@ -1,0 +1,32 @@
+{
+  "id": "budget_buffer",
+  "title": "Keep a comfortable buffer",
+  "source": "library",
+  "conditions": [
+    {
+      "signal": "monthly_surplus_3m",
+      "operator": "<",
+      "value": 100
+    },
+    {
+      "signal": "savings_buffer_months",
+      "operator": "<=",
+      "value": 2
+    }
+  ],
+  "combinator": "all",
+  "minimum_consent": "guidance",
+  "compliance_class": "guidance",
+  "priority": 6,
+  "cooldown_days": 30,
+  "channels": [
+    "app",
+    "email"
+  ],
+  "message": "Your estimated monthly buffer is around €{monthly_surplus_3m}, {first_name}. Check upcoming payments and try a budget plan that fits you.",
+  "explanation": "Your synthetic monthly surplus is under €100 and your synthetic buffer covers at most two months. No credit is offered.",
+  "action": "Review my budget",
+  "background": "default",
+  "start_date": "2026-01-01",
+  "end_date": "2027-12-31"
+}

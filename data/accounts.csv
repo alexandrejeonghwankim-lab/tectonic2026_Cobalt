@@ -1,0 +1,3 @@
+account_id,customer_id,type,balance_eur,status
+a3ccd14e-4ec0-4f85-acc1-37cd38ea4b5b,bacf63c8-a16a-4bb5-a7cd-e14076792a40,youth_account,2600,active
+da7c42c8-5cea-4366-a2f3-3fcc1116f4da,2fbf450c-f326-417c-973f-9a1743a7629b,current_account,14500,active

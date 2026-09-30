@@ -1,0 +1,42 @@
+{
+  "id": "loan_information",
+  "title": "Explore borrowing options",
+  "source": "library",
+  "conditions": [
+    {
+      "signal": "age",
+      "operator": ">=",
+      "value": 18
+    },
+    {
+      "signal": "monthly_surplus_3m",
+      "operator": ">=",
+      "value": 450
+    },
+    {
+      "signal": "savings_buffer_months",
+      "operator": ">=",
+      "value": 3
+    },
+    {
+      "signal": "savings_balance",
+      "operator": ">=",
+      "value": 5000
+    }
+  ],
+  "combinator": "all",
+  "minimum_consent": "offers",
+  "compliance_class": "offer",
+  "priority": 1,
+  "cooldown_days": 60,
+  "channels": [
+    "app",
+    "email"
+  ],
+  "message": "You have around €{monthly_surplus_3m} left over monthly and €{savings_balance} in savings, {first_name}. If you have a project in mind, explore borrowing options and the total costs first.",
+  "explanation": "Your synthetic surplus, savings and buffer crossed the information-only thresholds. This is general information, not a lending decision, quote or approval.",
+  "action": "Learn about borrowing",
+  "background": "default",
+  "start_date": "2026-01-01",
+  "end_date": "2027-12-31"
+}

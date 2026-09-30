@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #F4F9FB; }
+.sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 234px; background: #fff; border-right: 1px solid #e2ebf0; z-index: 5; overflow-y: auto; }
+.main-content { margin-left: 234px; padding: 28px clamp(20px, 3.5vw, 56px) 0; max-width: 1660px; }
+.nav-item { font-size: 13px !important; font-weight: 600 !important; padding: 13px 12px !important; height: auto !important; gap: 12px !important; border-radius: 10px !important; }
+.nav-item:hover { background: #e7f6fc !important; }
+button { transition: transform .16s ease, box-shadow .16s ease; }
+button:not(:disabled):hover { transform: translateY(-1px); }
+@media (max-width: 780px) {
+  .sidebar { position: relative; width: 100%; height: auto; bottom: auto; padding: 13px 16px; flex-direction: row !important; flex-wrap: wrap; align-items: center !important; gap: 5px !important; }
+  .sidebar > div:first-child { width: 100%; margin-bottom: 5px !important; }
+  .sidebar > div:last-child, .sidebar > p, .sidebar > div:empty { display: none; }
+  .nav-item { width: auto !important; font-size: 11px !important; padding: 8px !important; }
+  .main-content { margin-left: 0; padding: 22px 17px 0; }
+}
+@media (max-width: 480px) { .main-content h1 { font-size: 36px !important; } }

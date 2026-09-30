@@ -1,0 +1,67 @@
+transaction_id,customer_id,booking_date,amount_eur,category,description
+b81e8504-f0cc-4f67-b67d-ab32807ff65f,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-04-03,480,salary_or_allowance,Income
+05ad6609-d267-437f-ab28-0d11a4d4dc67,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-04-04,-110,groceries,Food store
+c0091698-b514-4840-910b-a5f40cc299f6,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-04-05,-140,travel,Travel provider
+eb95e640-7789-4668-86dc-e989fff32453,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-04-06,-85,savings,Own savings transfer
+6e06f9ff-9592-4229-81cf-dd31de33eaf5,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-05-03,480,salary_or_allowance,Income
+7f51c2d5-0a35-45b0-900a-8eba06dcf150,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-05-04,-110,groceries,Food store
+9d01999b-2d67-4669-95a3-7b34ddc044c8,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-05-05,-140,travel,Travel provider
+ec90b14a-13a0-48c8-9965-3755886f88e4,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-05-06,-85,savings,Own savings transfer
+ca26bc78-527c-435b-acae-96d5602ebdf9,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-06-03,480,salary_or_allowance,Income
+e1ade54d-c85c-4a5d-9088-635ad7baae71,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-06-04,-110,groceries,Food store
+0bc38c28-e5c4-4508-a737-6da1ef6d202a,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-06-05,-140,travel,Travel provider
+8175a362-01c1-4745-ac88-71fb3e394505,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-06-06,-85,savings,Own savings transfer
+de74c870-fa62-4470-b1d9-089d474f7d5b,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-07-03,480,salary_or_allowance,Income
+19bd686a-8b7d-4a68-8ba0-f71e830df4f5,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-07-04,-110,groceries,Food store
+9e6e133c-c5dc-4591-be74-506433deb2f4,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-07-05,-140,travel,Travel provider
+e44b5de6-2a1b-4d38-be80-73ed883918e4,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-07-06,-85,savings,Own savings transfer
+c5257b71-5975-46c8-8073-1e7f44d7e8c3,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-08-03,480,salary_or_allowance,Income
+46e6e676-873d-4a80-aa93-fea98e2471d9,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-08-04,-110,groceries,Food store
+edd05a71-2e21-4e1b-bea3-fac525627256,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-08-05,-140,travel,Travel provider
+0a4a1cc6-64f8-45f2-9c0b-98b708d09109,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-08-06,-85,savings,Own savings transfer
+92b38d61-a529-4043-a89b-4baf7e475e59,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-09-03,480,salary_or_allowance,Income
+b38373bb-43fd-4cce-83e1-896188653f55,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-09-04,-110,groceries,Food store
+e0444834-53c5-4cce-878b-2677032df3e6,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-09-05,-140,travel,Travel provider
+a6c8c28f-57cc-47a3-b0eb-e8c2bbedf8ca,bacf63c8-a16a-4bb5-a7cd-e14076792a40,2026-09-06,-85,savings,Own savings transfer
+4612851d-d148-4a9d-b60e-cf71d699577c,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-03,2800,salary_or_allowance,Income
+0bcb841c-a277-41d4-ba7f-c2ca51e24e62,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-04,-420,groceries,Food store
+d7628988-8d1b-44b3-a053-47dff19c0069,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-05,-210,travel,Travel provider
+bb8ac5f4-b095-45d2-82db-708e4c131c04,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-06,-120,savings,Own savings transfer
+f80a820c-1727-4d43-879b-8a6fe11ab0d7,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-07,-940,housing,Housing
+df2fa9b4-2aa3-4b3d-899a-7ab20a2d0cd9,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-08,-19,pharmacy,Pharmacy
+699a21a1-644d-44a8-83a8-c35145df9d9a,2fbf450c-f326-417c-973f-9a1743a7629b,2026-04-09,-12,religious_donation,Church donation
+0b54dbbc-08ff-4065-af2b-915eb256f405,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-03,2800,salary_or_allowance,Income
+463e2a5a-e6c2-4cda-ac19-11f2cee25cb6,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-04,-420,groceries,Food store
+5d195a1d-545b-4504-9b1d-fd8f12e3f251,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-05,-210,travel,Travel provider
+bf8c61b3-0b7b-4d10-b0ad-c620035ba053,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-06,-120,savings,Own savings transfer
+0a68309e-f86b-4946-836f-f64737018bd2,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-07,-940,housing,Housing
+62448c21-6313-4c57-9553-619baa8ae251,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-08,-19,pharmacy,Pharmacy
+220f5e89-6916-4794-93a8-7797608fbb11,2fbf450c-f326-417c-973f-9a1743a7629b,2026-05-09,-12,religious_donation,Church donation
+aa9b2887-55bb-4c34-8bee-0cecd8d424c1,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-03,2800,salary_or_allowance,Income
+9493e88d-d364-4747-b4e4-6039bedf9cc9,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-04,-420,groceries,Food store
+ced252a8-0d63-4cab-b470-15a1ed52372e,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-05,-210,travel,Travel provider
+b52b8bf2-5e30-425b-a03d-bcc997cc1d22,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-06,-120,savings,Own savings transfer
+c0a0e246-58e8-4afe-9e86-b7fdd70a503d,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-07,-940,housing,Housing
+422af63c-1d39-42f6-a7f5-418505ecd6c5,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-08,-19,pharmacy,Pharmacy
+7870cdf7-cebc-41f2-a244-e7a0105d6458,2fbf450c-f326-417c-973f-9a1743a7629b,2026-06-09,-12,religious_donation,Church donation
+5dba32a6-2ba3-40f1-8913-49659896e3be,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-03,2800,salary_or_allowance,Income
+311561fe-86f0-4141-9e9a-1d9b8bfcaab4,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-04,-420,groceries,Food store
+dbd863d3-cc2e-49a5-8236-47c3657c4a5f,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-05,-210,travel,Travel provider
+1306446f-f5e9-4ade-9c2b-aa8cdf44e1a5,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-06,-120,savings,Own savings transfer
+430a2f08-eaca-47c1-9ef0-7242dc5edf03,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-07,-940,housing,Housing
+96594c0e-a76c-48bd-8434-247d84ec5e29,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-08,-19,pharmacy,Pharmacy
+69d779aa-1821-4091-a802-56c3c660f616,2fbf450c-f326-417c-973f-9a1743a7629b,2026-07-09,-12,religious_donation,Church donation
+2c4b2955-ddca-4eab-a6f9-d8337c83e621,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-03,2800,salary_or_allowance,Income
+0f70d0d4-ef2c-4826-918c-4e645d08641a,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-04,-420,groceries,Food store
+d2e769ed-649d-4f1c-a7d3-f098d55538cb,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-05,-210,travel,Travel provider
+e4fe62a9-7d41-4258-9502-9ab6b46304cb,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-06,-120,savings,Own savings transfer
+f6e0821d-f619-4e35-a986-484608816be8,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-07,-940,housing,Housing
+598b04c2-16ac-4f0f-8da9-692f55ab986b,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-08,-19,pharmacy,Pharmacy
+82994f75-10da-44a6-91a6-cc06c4037b7f,2fbf450c-f326-417c-973f-9a1743a7629b,2026-08-09,-12,religious_donation,Church donation
+365e36c7-d144-4973-83e2-c5f23b98ff17,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-03,2800,salary_or_allowance,Income
+54ad99cb-87bb-4f8b-8940-81e98f223f17,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-04,-420,groceries,Food store
+f1d0a6f7-ca84-4787-afe1-3d8a2bd48eed,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-05,-210,travel,Travel provider
+b97885cf-d000-4b5d-8d9f-7e166ae5d1b2,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-06,-120,savings,Own savings transfer
+69007221-3c0b-45ba-94eb-aaf4cba8e6d9,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-07,-940,housing,Housing
+a31f9e80-9e87-4fec-ae2a-14e1cfe468ff,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-08,-19,pharmacy,Pharmacy
+9f13c65a-bc13-4f7c-94eb-7c56d5142a5a,2fbf450c-f326-417c-973f-9a1743a7629b,2026-09-09,-12,religious_donation,Church donation

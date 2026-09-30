@@ -1,0 +1,32 @@
+{
+  "id": "grow_savings",
+  "title": "Grow your savings",
+  "source": "library",
+  "conditions": [
+    {
+      "signal": "monthly_surplus_3m",
+      "operator": ">",
+      "value": 200
+    },
+    {
+      "signal": "monthly_surplus_3m",
+      "operator": "<",
+      "value": 450
+    }
+  ],
+  "combinator": "all",
+  "minimum_consent": "guidance",
+  "compliance_class": "guidance",
+  "priority": 2,
+  "cooldown_days": 30,
+  "channels": [
+    "app",
+    "email"
+  ],
+  "message": "You have around €{monthly_surplus_3m} left over each month, {first_name}. Want to set aside a comfortable amount for a savings goal?",
+  "explanation": "Your synthetic average monthly surplus is between €200 and €450. You can explore savings goals at your own pace.",
+  "action": "Plan a savings goal",
+  "background": "default",
+  "start_date": "2026-01-01",
+  "end_date": "2027-12-31"
+}
