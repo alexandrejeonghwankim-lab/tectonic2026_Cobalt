@@ -1,4 +1,4 @@
-# KBC Intent Engine — synthetic, interactive hackathon demo
+#KBC NOVA: Next-step, Orchestration for Value and Assistance
 
 **Start:** on Linux run `./start.sh`; on Windows double-click `start.bat` (or run it in Command Prompt). Windows uses its own `.venv-win` environment; Windows startup has not been tested on a Windows machine., Open the local address shown (normally `http://localhost:3000`). **No access code or sign-in.** Ctrl+C stops it. This is a local demonstration: never expose it publicly or enter real customer data. Python 3.12 and Node.js are needed; the launcher installs the declared dependency if missing. See [GUIDE.md](GUIDE.md) for every button and the in-app Help page for a short overview.
 
